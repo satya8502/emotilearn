@@ -7,16 +7,6 @@ from flask_project.models import books
 import text2emotion as te
 from gtts import gTTS
 l=[]
-class myThread(threading.Thread):
-    def __init__(self,threadID,name,counter):
-        threading.Thread.__init__(self)
-        self.threadID=threadID
-        self.name=name
-        self.counter=counter
-        #self.m=m
-    def run(self):
-        if(self.threadID==1):
-            meaning()
 @app.route('/')
 def start():
     book=books.query.first()
